@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TravelingSalesmanProblem</string>
+
+    <string name="first_city">First city</string>
+    <string name="last_city">Second city</string>
+
+
 </resources>
