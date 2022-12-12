@@ -4,35 +4,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="@dimen/total_padding">
 
     <!-- Layout for text views -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_weight="1.0">
+        android:layout_weight="0">
 
         <TextView
             android:id="@+id/firstCityTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/first_city"
-            android:layout_weight="0.25"/>
+            android:layout_weight="0.2"/>
 
         <TextView
             android:id="@+id/lastCityTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/last_city"
-            android:layout_weight="0.25"/>
+            android:layout_weight="0.2"/>
 
         <TextView
             android:id="@+id/distanceTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/distance"
-            android:layout_weight="0.25"/>
+            android:layout_weight="0.35"/>
 
     </LinearLayout>
 
@@ -40,19 +41,51 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1.0">
+        android:layout_weight="0">
 
         <Spinner
             android:id="@+id/firstCitySpinner"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="0.045"
+            android:entries="@array/spinnerCities"/>
 
         <Spinner
             android:id="@+id/lastCitySpinner"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="0.115"
+            android:entries="@array/spinnerCities"/>
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:inputType="number"
+            android:hint="@string/distance"/>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/applyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.95"
+            android:text="@string/apply" />
+
+        <Button
+            android:id="@+id/setDistanceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:text="@string/set_distance" />
+    </LinearLayout>
+
 
 
 </LinearLayout>

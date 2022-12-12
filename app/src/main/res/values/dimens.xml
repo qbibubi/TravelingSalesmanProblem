@@ -8,4 +8,6 @@
     <dimen name="margin_up">2.5dp</dimen>
     <dimen name="margin_down">2.5dp</dimen>
 
+    <dimen name="total_padding">6dp</dimen>
+
 </resources>
