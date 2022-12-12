@@ -1,10 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <!-- Layout for text views -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@+id/firstCityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_city"
+            android:layout_weight="0.25"/>
+
+        <TextView
+            android:id="@+id/lastCityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/last_city"
+            android:layout_weight="0.25"/>
+
+        <TextView
+            android:id="@+id/distanceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/distance"
+            android:layout_weight="0.25"/>
+
+    </LinearLayout>
+
+    <!-- Layout for text spinners and distance input-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+
+        <Spinner
+            android:id="@+id/firstCitySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/lastCitySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 
 </LinearLayout>

@@ -3,6 +3,6 @@
 
     <string name="first_city">First city</string>
     <string name="last_city">Second city</string>
-
+    <string name="distance">Distance</string>
 
 </resources>
