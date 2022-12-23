@@ -3,11 +3,10 @@
     <dimen name="item_padding_left">2dp</dimen>
     <dimen name="item_padding_right">2dp</dimen>
 
-    <dimen name="margin_left">5dp</dimen>
-    <dimen name="margin_right">5dp</dimen>
-    <dimen name="margin_up">2.5dp</dimen>
-    <dimen name="margin_down">2.5dp</dimen>
+    <dimen name="margin_left_right">5dp</dimen>
+    <dimen name="margin_up_down">2.5dp</dimen>
 
     <dimen name="total_padding">6dp</dimen>
+    <dimen name="total_margin">5dp</dimen>
 
 </resources>

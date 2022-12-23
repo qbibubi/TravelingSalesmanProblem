@@ -3,83 +3,122 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity"
     android:padding="@dimen/total_padding">
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:orientation="vertical"
-        android:layout_margin="@dimen/margin_right"
-        android:padding="@dimen/total_padding">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/firstCityTV"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/first_city"/>
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_left_right"
+            android:padding="@dimen/total_padding">
 
-        <TextView
-            android:id="@+id/lastCityTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/last_city"/>
+            <TextView
+                android:id="@+id/firstCityTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/total_padding"
+                android:layout_margin="@dimen/margin_left_right"
+                android:text="@string/first_city"/>
 
-        <TextView
-            android:id="@+id/distanceTV"
+            <TextView
+                android:id="@+id/lastCityTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/total_padding"
+                android:layout_margin="@dimen/margin_left_right"
+                android:text="@string/last_city"/>
+
+            <TextView
+                android:id="@+id/distanceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/total_padding"
+                android:layout_margin="@dimen/margin_left_right"
+                android:text="@string/distance"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/distance"/>
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_left_right"
+            android:padding="@dimen/total_padding">
+
+            <Spinner
+                android:id="@+id/firstCitySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/total_padding"
+                android:layout_margin="@dimen/margin_left_right"
+                android:entries="@array/spinnerCities"/>
+
+            <Spinner
+                android:id="@+id/lastCitySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/total_padding"
+                android:layout_margin="@dimen/margin_left_right"
+                android:entries="@array/spinnerCities"/>
+
+            <EditText
+                android:id="@+id/editTextNumber"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/distance"
+                android:padding="@dimen/total_padding"
+                android:layout_margin="@dimen/margin_left_right"
+                android:inputType="number"/>
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:orientation="vertical"
-        android:layout_margin="@dimen/margin_right"
-        android:padding="@dimen/total_padding">
-
-        <Spinner
-            android:id="@+id/firstCitySpinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/spinnerCities"/>
-
-        <Spinner
-            android:id="@+id/lastCitySpinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/spinnerCities"/>
-
-        <EditText
-            android:id="@+id/editTextNumber"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/distance"
-            android:inputType="number"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:orientation="vertical"
-        android:layout_margin="@dimen/margin_right"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/margin_left_right"
         android:padding="@dimen/total_padding">
 
         <Button
             android:id="@+id/applyButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="@dimen/total_padding"
+            android:layout_margin="@dimen/margin_left_right"
             android:text="@string/apply" />
 
         <Button
             android:id="@+id/setDistanceButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="@dimen/total_padding"
+            android:layout_margin="@dimen/margin_left_right"
             android:text="@string/set_distance" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/outcomeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/total_padding"
+            android:layout_margin="@dimen/margin_up_down"
+            android:text="@string/outcome" />
+
+
+    </LinearLayout>
+
 
 </LinearLayout>
