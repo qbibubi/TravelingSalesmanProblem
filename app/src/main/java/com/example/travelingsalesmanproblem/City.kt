@@ -2,7 +2,9 @@ package com.example.travelingsalesmanproblem
 
 import kotlin.math.sqrt
 
-class City(val name: String, val x: Double, val y: Double) {
+class City(private val name: String, val x: Double, val y: Double) {
+    // Overrides toString() to return only name
+    // for the ArrayAdapters and spinners
     override fun toString(): String {
         return name
     }

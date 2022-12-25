@@ -19,7 +19,8 @@ fun solveTSP(cities: List<City>): List<City> {
         val subproblemPath = solveTSP(remainingCities)
 
         // Compute the total distance of the current permutation
-        val distance = cities[i].distanceTo(subproblemPath.first()) + subproblemPath.last().distanceTo(cities[i]) + subproblemPath.zipWithNext().sumByDouble { (a, b) -> a.distanceTo(b) }
+        val distance = cities[i].distanceTo(subproblemPath.first()) + subproblemPath.last().distanceTo(cities[i]) + subproblemPath.zipWithNext()
+            .sumOf { (a, b) -> a.distanceTo(b) }
 
         // if the current permutation has a shorter distance, update the minimum distance and path
         if (distance < minDistance) {
