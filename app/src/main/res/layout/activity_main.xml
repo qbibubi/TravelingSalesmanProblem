@@ -57,16 +57,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/total_padding"
-                android:layout_margin="@dimen/margin_left_right"
-                android:entries="@array/spinnerCities"/>
+                android:layout_margin="@dimen/margin_left_right" />
 
             <Spinner
                 android:id="@+id/lastCitySpinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/total_padding"
-                android:layout_margin="@dimen/margin_left_right"
-                android:entries="@array/spinnerCities"/>
+                android:layout_margin="@dimen/margin_left_right" />
 
             <EditText
                 android:id="@+id/editTextNumber"
