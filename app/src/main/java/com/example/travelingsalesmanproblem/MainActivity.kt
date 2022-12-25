@@ -24,11 +24,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Start and finish destinations
-        startDestination = findViewById(R.id.firstCitySpinner)
-        finishDestination = findViewById(R.id.lastCitySpinner)
-
-        // Initialize a list of eight cities
         cities = listOf(
             City("Gdynia", 0.0, 0.0),
             City("Gdańsk", 1.0, 0.0),
@@ -42,26 +37,33 @@ class MainActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, cities)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
+        startDestination = findViewById(R.id.firstCitySpinner)
         startDestination.adapter = adapter
         startDestination.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val city = parent?.getItemAtPosition(position) as City
-                Log.d("City", city.toString())
+                Log.d("City1", city.toString())
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
 
+        finishDestination = findViewById(R.id.lastCitySpinner)
         finishDestination.adapter = adapter
         finishDestination.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val city = parent?.getItemAtPosition(position) as City
-                Log.d("City", city.toString())
+                Log.d("City2", city.toString())
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
 
-
+        outcomeTV = findViewById(R.id.outcomeTV)
+        applyButton = findViewById(R.id.applyButton)
+        applyButton.setOnClickListener {
+            var path = solveTSP(cities)
+            outcomeTV.text = path.toString()
+        }
     }
 }

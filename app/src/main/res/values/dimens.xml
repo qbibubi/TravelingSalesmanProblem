@@ -6,4 +6,5 @@
     <dimen name="margin_up_down">2.5dp</dimen>
     <dimen name="total_padding">6dp</dimen>
     <dimen name="total_margin">5dp</dimen>
+    <dimen name="test_padding">10dp</dimen>
 </resources>
