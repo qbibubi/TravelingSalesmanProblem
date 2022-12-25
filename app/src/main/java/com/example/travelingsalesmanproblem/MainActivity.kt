@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
 
@@ -15,9 +16,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var outcomeTV: TextView
     private lateinit var startDestination: Spinner
     private lateinit var finishDestination: Spinner
-    private lateinit var distanceInput: Number
     private lateinit var applyButton: Button
     private lateinit var distanceButton: Button
+    private lateinit var distanceInput: EditText
     private lateinit var cities: List<City>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,5 +66,12 @@ class MainActivity : AppCompatActivity() {
             var path = solveTSP(cities)
             outcomeTV.text = path.toString()
         }
+
+        distanceInput = findViewById(R.id.distanceNumber)
+        distanceButton = findViewById(R.id.setDistanceButton)
+        distanceButton.setOnClickListener {
+
+        }
+
     }
 }

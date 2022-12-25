@@ -67,12 +67,12 @@
                 android:padding="@dimen/total_padding" />
 
             <EditText
-                android:id="@+id/editTextNumber"
-                android:layout_width="100dp"
+                android:id="@+id/distanceNumber"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_left_right"
                 android:hint="@string/distance"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:padding="@dimen/total_padding" />
 
         </LinearLayout>
