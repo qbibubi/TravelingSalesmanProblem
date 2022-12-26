@@ -5,12 +5,7 @@ import android.os.Bundle
 import android.os.Debug
 import android.util.Log
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var outcomeTV: TextView
@@ -77,15 +72,14 @@ class MainActivity : AppCompatActivity() {
         distanceButton.setOnClickListener {
             // Base case: if both cities are the same return
             if (cities[startSelected] == cities[finishSelected]) {
-                // TODO("Toast notification both cities are equal")
+                Toast.makeText(this, "Both cities are the same.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             // Base case: if distanceInput is empty return
             // and output toast notification
             if (distanceInput.text.isEmpty()) {
-                // TODO("Add toast notification that text cannot be empty")
-                // "Distance cannot be empty. Nothing has changed."
+                Toast.makeText(this, "Distance cannot be empty. Nothing has changed.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
         }
